@@ -7,26 +7,115 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2138D7786057B93AF02DF1B2 /* Pods_VolleyGold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04886759AD5ADF6219DF170 /* Pods_VolleyGold.framework */; };
+		A42B27A627F0EC8A00F0F956 /* gear.json in Resources */ = {isa = PBXBuildFile; fileRef = A42B27A327F0EC8A00F0F956 /* gear.json */; };
+		A42B27A727F0EC8A00F0F956 /* question.json in Resources */ = {isa = PBXBuildFile; fileRef = A42B27A427F0EC8A00F0F956 /* question.json */; };
+		A42B27A827F0EC8A00F0F956 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = A42B27A527F0EC8A00F0F956 /* shop.json */; };
+		A42B27AB27F0ED5600F0F956 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B27AA27F0ED5600F0F956 /* ProductCell.swift */; };
+		A42B27AD27F0EE8000F0F956 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B27AC27F0EE8000F0F956 /* SettingView.swift */; };
+		A42B27AF27F0EF4700F0F956 /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B27AE27F0EF4700F0F956 /* ProductType.swift */; };
+		A42B27B127F0F6D800F0F956 /* ReceiptResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B27B027F0F6D800F0F956 /* ReceiptResponse.swift */; };
+		A42B27B527F127D400F0F956 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42B27B427F127D400F0F956 /* GameKit.framework */; };
+		A42B27B827F127E900F0F956 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42B27B727F127E900F0F956 /* StoreKit.framework */; };
 		A464D76527EFAD1F00EF68EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D76427EFAD1F00EF68EB /* AppDelegate.swift */; };
-		A464D76727EFAD1F00EF68EB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A464D76627EFAD1F00EF68EB /* GameScene.sks */; };
-		A464D76927EFAD1F00EF68EB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A464D76827EFAD1F00EF68EB /* Actions.sks */; };
 		A464D76B27EFAD1F00EF68EB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D76A27EFAD1F00EF68EB /* GameScene.swift */; };
 		A464D76D27EFAD1F00EF68EB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D76C27EFAD1F00EF68EB /* GameViewController.swift */; };
-		A464D77027EFAD1F00EF68EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A464D76E27EFAD1F00EF68EB /* Main.storyboard */; };
 		A464D77227EFAD2000EF68EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A464D77127EFAD2000EF68EB /* Assets.xcassets */; };
 		A464D77527EFAD2000EF68EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A464D77327EFAD2000EF68EB /* LaunchScreen.storyboard */; };
+		A464D77E27EFADF400EF68EB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D77D27EFADF400EF68EB /* HomeViewController.swift */; };
+		A464D78027EFAE1800EF68EB /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D77F27EFAE1800EF68EB /* NetworkMonitor.swift */; };
+		A464D78227EFAE2E00EF68EB /* GameCenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D78127EFAE2E00EF68EB /* GameCenterManager.swift */; };
+		A464D78427EFAE9500EF68EB /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D78327EFAE9500EF68EB /* PurchaseManager.swift */; };
+		A464D78727EFAED500EF68EB /* DimensionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D78627EFAED500EF68EB /* DimensionExtension.swift */; };
+		A464D78A27EFB0B200EF68EB /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D78927EFB0B200EF68EB /* UIConfig.swift */; };
+		A464D78C27EFB3AD00EF68EB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D78B27EFB3AD00EF68EB /* UIViewControllerExtension.swift */; };
+		A464D78E27EFB4A200EF68EB /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D78D27EFB4A200EF68EB /* InstructionViewController.swift */; };
+		A464D79027EFB73700EF68EB /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D78F27EFB73700EF68EB /* UITextViewExtension.swift */; };
+		A464D79227EFB7B200EF68EB /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D79127EFB7B200EF68EB /* GameSession.swift */; };
+		A464D79427EFB84F00EF68EB /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D79327EFB84F00EF68EB /* ShopViewController.swift */; };
+		A464D79627EFB87200EF68EB /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D79527EFB87200EF68EB /* SettingViewController.swift */; };
+		A464D79827EFB89800EF68EB /* OnlineGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D79727EFB89800EF68EB /* OnlineGameViewController.swift */; };
+		A464D79B27EFB92700EF68EB /* OnlineGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D79A27EFB92700EF68EB /* OnlineGameScene.swift */; };
+		A464D79D27EFB96E00EF68EB /* SkinType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D79C27EFB96E00EF68EB /* SkinType.swift */; };
+		A464D79F27EFB98300EF68EB /* SkinProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D79E27EFB98300EF68EB /* SkinProduct.swift */; };
+		A464D7A127EFBA6100EF68EB /* Tuning.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7A027EFBA6100EF68EB /* Tuning.swift */; };
+		A464D7A327EFBAAB00EF68EB /* SKSceneExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7A227EFBAAB00EF68EB /* SKSceneExtension.swift */; };
+		A464D7A527EFBB0400EF68EB /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7A427EFBB0400EF68EB /* Error.swift */; };
+		A464D7A727EFBCB400EF68EB /* GameScene+SKPhysicsContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7A627EFBCB400EF68EB /* GameScene+SKPhysicsContactDelegate.swift */; };
+		A464D7AA27EFBCF100EF68EB /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7A927EFBCF100EF68EB /* Basket.swift */; };
+		A464D7AC27EFBD0C00EF68EB /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7AB27EFBD0C00EF68EB /* Player.swift */; };
+		A464D7AE27EFBD2A00EF68EB /* PlayerDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7AD27EFBD2A00EF68EB /* PlayerDirection.swift */; };
+		A464D7B027EFBD5900EF68EB /* GarbageBin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7AF27EFBD5900EF68EB /* GarbageBin.swift */; };
+		A464D7B227EFBD8100EF68EB /* BitMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7B127EFBD8100EF68EB /* BitMask.swift */; };
+		A464D7B427EFBE0F00EF68EB /* LargeGold.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7B327EFBE0F00EF68EB /* LargeGold.swift */; };
+		A464D7B827EFBF3200EF68EB /* ShopScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7B727EFBF3200EF68EB /* ShopScene.swift */; };
+		A464D7BA27EFBF8A00EF68EB /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7B927EFBF8A00EF68EB /* Dialog.swift */; };
+		A464D7BC27EFC0A700EF68EB /* BitMaskExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7BB27EFC0A700EF68EB /* BitMaskExtension.swift */; };
+		A464D7BE27EFC0EA00EF68EB /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7BD27EFC0EA00EF68EB /* CGPointExtension.swift */; };
+		A464D7C027EFC16E00EF68EB /* OnlineShopScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7BF27EFC16E00EF68EB /* OnlineShopScene.swift */; };
+		A464D7C227EFC1CA00EF68EB /* GameMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7C127EFC1CA00EF68EB /* GameMessage.swift */; };
+		A464D7C427EFC26D00EF68EB /* GoodsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7C327EFC26D00EF68EB /* GoodsType.swift */; };
+		A464D7C627EFC28400EF68EB /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7C527EFC28400EF68EB /* Goods.swift */; };
+		A486644C27F2A6D80080841A /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486644B27F2A6D80080841A /* GameOverScene.swift */; };
+		A486644E27F2B17E0080841A /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = A486644D27F2B17E0080841A /* Configuration.storekit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0280DC63EBA55BE588D6698E /* Pods-VolleyGold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolleyGold.release.xcconfig"; path = "Target Support Files/Pods-VolleyGold/Pods-VolleyGold.release.xcconfig"; sourceTree = "<group>"; };
+		A42B27A327F0EC8A00F0F956 /* gear.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gear.json; sourceTree = "<group>"; };
+		A42B27A427F0EC8A00F0F956 /* question.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = question.json; sourceTree = "<group>"; };
+		A42B27A527F0EC8A00F0F956 /* shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
+		A42B27AA27F0ED5600F0F956 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		A42B27AC27F0EE8000F0F956 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		A42B27AE27F0EF4700F0F956 /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
+		A42B27B027F0F6D800F0F956 /* ReceiptResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptResponse.swift; sourceTree = "<group>"; };
+		A42B27B427F127D400F0F956 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		A42B27B627F127DD00F0F956 /* VolleyGold.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VolleyGold.entitlements; sourceTree = "<group>"; };
+		A42B27B727F127E900F0F956 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A464D76127EFAD1F00EF68EB /* VolleyGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolleyGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A464D76427EFAD1F00EF68EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A464D76627EFAD1F00EF68EB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		A464D76827EFAD1F00EF68EB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		A464D76A27EFAD1F00EF68EB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A464D76C27EFAD1F00EF68EB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		A464D76F27EFAD1F00EF68EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A464D77127EFAD2000EF68EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A464D77427EFAD2000EF68EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A464D77D27EFADF400EF68EB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A464D77F27EFAE1800EF68EB /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		A464D78127EFAE2E00EF68EB /* GameCenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterManager.swift; sourceTree = "<group>"; };
+		A464D78327EFAE9500EF68EB /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		A464D78627EFAED500EF68EB /* DimensionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionExtension.swift; sourceTree = "<group>"; };
+		A464D78927EFB0B200EF68EB /* UIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
+		A464D78B27EFB3AD00EF68EB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		A464D78D27EFB4A200EF68EB /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
+		A464D78F27EFB73700EF68EB /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		A464D79127EFB7B200EF68EB /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		A464D79327EFB84F00EF68EB /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		A464D79527EFB87200EF68EB /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		A464D79727EFB89800EF68EB /* OnlineGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineGameViewController.swift; sourceTree = "<group>"; };
+		A464D79A27EFB92700EF68EB /* OnlineGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineGameScene.swift; sourceTree = "<group>"; };
+		A464D79C27EFB96E00EF68EB /* SkinType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinType.swift; sourceTree = "<group>"; };
+		A464D79E27EFB98300EF68EB /* SkinProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinProduct.swift; sourceTree = "<group>"; };
+		A464D7A027EFBA6100EF68EB /* Tuning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tuning.swift; sourceTree = "<group>"; };
+		A464D7A227EFBAAB00EF68EB /* SKSceneExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSceneExtension.swift; sourceTree = "<group>"; };
+		A464D7A427EFBB0400EF68EB /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		A464D7A627EFBCB400EF68EB /* GameScene+SKPhysicsContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+SKPhysicsContactDelegate.swift"; sourceTree = "<group>"; };
+		A464D7A927EFBCF100EF68EB /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		A464D7AB27EFBD0C00EF68EB /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A464D7AD27EFBD2A00EF68EB /* PlayerDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDirection.swift; sourceTree = "<group>"; };
+		A464D7AF27EFBD5900EF68EB /* GarbageBin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageBin.swift; sourceTree = "<group>"; };
+		A464D7B127EFBD8100EF68EB /* BitMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMask.swift; sourceTree = "<group>"; };
+		A464D7B327EFBE0F00EF68EB /* LargeGold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeGold.swift; sourceTree = "<group>"; };
+		A464D7B727EFBF3200EF68EB /* ShopScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopScene.swift; sourceTree = "<group>"; };
+		A464D7B927EFBF8A00EF68EB /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
+		A464D7BB27EFC0A700EF68EB /* BitMaskExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskExtension.swift; sourceTree = "<group>"; };
+		A464D7BD27EFC0EA00EF68EB /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
+		A464D7BF27EFC16E00EF68EB /* OnlineShopScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineShopScene.swift; sourceTree = "<group>"; };
+		A464D7C127EFC1CA00EF68EB /* GameMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMessage.swift; sourceTree = "<group>"; };
+		A464D7C327EFC26D00EF68EB /* GoodsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsType.swift; sourceTree = "<group>"; };
+		A464D7C527EFC28400EF68EB /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
+		A486644B27F2A6D80080841A /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		A486644D27F2B17E0080841A /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		D04886759AD5ADF6219DF170 /* Pods_VolleyGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VolleyGold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCD0788A92610EEB17CE48F /* Pods-VolleyGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolleyGold.debug.xcconfig"; path = "Target Support Files/Pods-VolleyGold/Pods-VolleyGold.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,17 +123,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42B27B827F127E900F0F956 /* StoreKit.framework in Frameworks */,
+				2138D7786057B93AF02DF1B2 /* Pods_VolleyGold.framework in Frameworks */,
+				A42B27B527F127D400F0F956 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240CD5E3948E04F44F49EC4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A42B27B727F127E900F0F956 /* StoreKit.framework */,
+				A42B27B427F127D400F0F956 /* GameKit.framework */,
+				D04886759AD5ADF6219DF170 /* Pods_VolleyGold.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A42B27A127F0EC7200F0F956 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A464D77127EFAD2000EF68EB /* Assets.xcassets */,
+				A42B27A227F0EC8A00F0F956 /* Animation */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A42B27A227F0EC8A00F0F956 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				A42B27A327F0EC8A00F0F956 /* gear.json */,
+				A42B27A427F0EC8A00F0F956 /* question.json */,
+				A42B27A527F0EC8A00F0F956 /* shop.json */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		A42B27A927F0ED4500F0F956 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A42B27AA27F0ED5600F0F956 /* ProductCell.swift */,
+				A42B27AC27F0EE8000F0F956 /* SettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A464D75827EFAD1F00EF68EB = {
 			isa = PBXGroup;
 			children = (
 				A464D76327EFAD1F00EF68EB /* VolleyGold */,
 				A464D76227EFAD1F00EF68EB /* Products */,
+				F3920250DEE3E5152EB3A269 /* Pods */,
+				240CD5E3948E04F44F49EC4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,16 +191,110 @@
 		A464D76327EFAD1F00EF68EB /* VolleyGold */ = {
 			isa = PBXGroup;
 			children = (
+				A42B27B627F127DD00F0F956 /* VolleyGold.entitlements */,
 				A464D76427EFAD1F00EF68EB /* AppDelegate.swift */,
-				A464D76627EFAD1F00EF68EB /* GameScene.sks */,
-				A464D76827EFAD1F00EF68EB /* Actions.sks */,
-				A464D76A27EFAD1F00EF68EB /* GameScene.swift */,
-				A464D76C27EFAD1F00EF68EB /* GameViewController.swift */,
-				A464D76E27EFAD1F00EF68EB /* Main.storyboard */,
-				A464D77127EFAD2000EF68EB /* Assets.xcassets */,
+				A464D78527EFAECE00EF68EB /* Extension */,
 				A464D77327EFAD2000EF68EB /* LaunchScreen.storyboard */,
+				A464D77B27EFADD200EF68EB /* Manager */,
+				A464D78827EFAF6F00EF68EB /* Model */,
+				A464D7A827EFBCE300EF68EB /* Node */,
+				A42B27A127F0EC7200F0F956 /* Resources */,
+				A464D79927EFB8B700EF68EB /* Scene */,
+				A42B27A927F0ED4500F0F956 /* View */,
+				A464D77C27EFADDB00EF68EB /* View Controller */,
+				A486644D27F2B17E0080841A /* Configuration.storekit */,
 			);
 			path = VolleyGold;
+			sourceTree = "<group>";
+		};
+		A464D77B27EFADD200EF68EB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A464D77F27EFAE1800EF68EB /* NetworkMonitor.swift */,
+				A464D78127EFAE2E00EF68EB /* GameCenterManager.swift */,
+				A464D78327EFAE9500EF68EB /* PurchaseManager.swift */,
+				A464D79127EFB7B200EF68EB /* GameSession.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A464D77C27EFADDB00EF68EB /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A464D76C27EFAD1F00EF68EB /* GameViewController.swift */,
+				A464D77D27EFADF400EF68EB /* HomeViewController.swift */,
+				A464D78D27EFB4A200EF68EB /* InstructionViewController.swift */,
+				A464D79327EFB84F00EF68EB /* ShopViewController.swift */,
+				A464D79527EFB87200EF68EB /* SettingViewController.swift */,
+				A464D79727EFB89800EF68EB /* OnlineGameViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		A464D78527EFAECE00EF68EB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A464D78627EFAED500EF68EB /* DimensionExtension.swift */,
+				A464D78B27EFB3AD00EF68EB /* UIViewControllerExtension.swift */,
+				A464D78F27EFB73700EF68EB /* UITextViewExtension.swift */,
+				A464D7A227EFBAAB00EF68EB /* SKSceneExtension.swift */,
+				A464D7BB27EFC0A700EF68EB /* BitMaskExtension.swift */,
+				A464D7BD27EFC0EA00EF68EB /* CGPointExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A464D78827EFAF6F00EF68EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A464D78927EFB0B200EF68EB /* UIConfig.swift */,
+				A464D79C27EFB96E00EF68EB /* SkinType.swift */,
+				A464D79E27EFB98300EF68EB /* SkinProduct.swift */,
+				A464D7A027EFBA6100EF68EB /* Tuning.swift */,
+				A464D7A427EFBB0400EF68EB /* Error.swift */,
+				A464D7AD27EFBD2A00EF68EB /* PlayerDirection.swift */,
+				A464D7B127EFBD8100EF68EB /* BitMask.swift */,
+				A464D7C127EFC1CA00EF68EB /* GameMessage.swift */,
+				A464D7C327EFC26D00EF68EB /* GoodsType.swift */,
+				A42B27AE27F0EF4700F0F956 /* ProductType.swift */,
+				A42B27B027F0F6D800F0F956 /* ReceiptResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A464D79927EFB8B700EF68EB /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A464D76A27EFAD1F00EF68EB /* GameScene.swift */,
+				A464D79A27EFB92700EF68EB /* OnlineGameScene.swift */,
+				A464D7A627EFBCB400EF68EB /* GameScene+SKPhysicsContactDelegate.swift */,
+				A464D7B727EFBF3200EF68EB /* ShopScene.swift */,
+				A464D7BF27EFC16E00EF68EB /* OnlineShopScene.swift */,
+				A486644B27F2A6D80080841A /* GameOverScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		A464D7A827EFBCE300EF68EB /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				A464D7A927EFBCF100EF68EB /* Basket.swift */,
+				A464D7AB27EFBD0C00EF68EB /* Player.swift */,
+				A464D7AF27EFBD5900EF68EB /* GarbageBin.swift */,
+				A464D7B327EFBE0F00EF68EB /* LargeGold.swift */,
+				A464D7B927EFBF8A00EF68EB /* Dialog.swift */,
+				A464D7C527EFC28400EF68EB /* Goods.swift */,
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+		F3920250DEE3E5152EB3A269 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECCD0788A92610EEB17CE48F /* Pods-VolleyGold.debug.xcconfig */,
+				0280DC63EBA55BE588D6698E /* Pods-VolleyGold.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +304,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A464D77827EFAD2000EF68EB /* Build configuration list for PBXNativeTarget "VolleyGold" */;
 			buildPhases = (
+				E862230437B0232CE8F2D1EA /* [CP] Check Pods Manifest.lock */,
 				A464D75D27EFAD1F00EF68EB /* Sources */,
 				A464D75E27EFAD1F00EF68EB /* Frameworks */,
 				A464D75F27EFAD1F00EF68EB /* Resources */,
+				48CEE89CB3F07BC328E86BA7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,38 +357,112 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A464D77027EFAD1F00EF68EB /* Main.storyboard in Resources */,
-				A464D76727EFAD1F00EF68EB /* GameScene.sks in Resources */,
 				A464D77227EFAD2000EF68EB /* Assets.xcassets in Resources */,
+				A486644E27F2B17E0080841A /* Configuration.storekit in Resources */,
+				A42B27A827F0EC8A00F0F956 /* shop.json in Resources */,
 				A464D77527EFAD2000EF68EB /* LaunchScreen.storyboard in Resources */,
-				A464D76927EFAD1F00EF68EB /* Actions.sks in Resources */,
+				A42B27A627F0EC8A00F0F956 /* gear.json in Resources */,
+				A42B27A727F0EC8A00F0F956 /* question.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48CEE89CB3F07BC328E86BA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VolleyGold/Pods-VolleyGold-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VolleyGold/Pods-VolleyGold-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VolleyGold/Pods-VolleyGold-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E862230437B0232CE8F2D1EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VolleyGold-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A464D75D27EFAD1F00EF68EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A464D79D27EFB96E00EF68EB /* SkinType.swift in Sources */,
+				A464D7C027EFC16E00EF68EB /* OnlineShopScene.swift in Sources */,
 				A464D76B27EFAD1F00EF68EB /* GameScene.swift in Sources */,
+				A464D78427EFAE9500EF68EB /* PurchaseManager.swift in Sources */,
+				A464D78C27EFB3AD00EF68EB /* UIViewControllerExtension.swift in Sources */,
+				A464D7A327EFBAAB00EF68EB /* SKSceneExtension.swift in Sources */,
+				A464D7C427EFC26D00EF68EB /* GoodsType.swift in Sources */,
+				A464D79F27EFB98300EF68EB /* SkinProduct.swift in Sources */,
+				A464D7C227EFC1CA00EF68EB /* GameMessage.swift in Sources */,
+				A464D79027EFB73700EF68EB /* UITextViewExtension.swift in Sources */,
+				A464D7B027EFBD5900EF68EB /* GarbageBin.swift in Sources */,
 				A464D76D27EFAD1F00EF68EB /* GameViewController.swift in Sources */,
+				A464D79627EFB87200EF68EB /* SettingViewController.swift in Sources */,
+				A464D7BE27EFC0EA00EF68EB /* CGPointExtension.swift in Sources */,
+				A464D7BC27EFC0A700EF68EB /* BitMaskExtension.swift in Sources */,
+				A464D7B427EFBE0F00EF68EB /* LargeGold.swift in Sources */,
+				A486644C27F2A6D80080841A /* GameOverScene.swift in Sources */,
+				A464D7AA27EFBCF100EF68EB /* Basket.swift in Sources */,
+				A464D78227EFAE2E00EF68EB /* GameCenterManager.swift in Sources */,
+				A464D79827EFB89800EF68EB /* OnlineGameViewController.swift in Sources */,
+				A464D78027EFAE1800EF68EB /* NetworkMonitor.swift in Sources */,
+				A464D79227EFB7B200EF68EB /* GameSession.swift in Sources */,
+				A42B27AD27F0EE8000F0F956 /* SettingView.swift in Sources */,
+				A464D7A127EFBA6100EF68EB /* Tuning.swift in Sources */,
+				A464D7C627EFC28400EF68EB /* Goods.swift in Sources */,
+				A464D7A527EFBB0400EF68EB /* Error.swift in Sources */,
+				A464D7AE27EFBD2A00EF68EB /* PlayerDirection.swift in Sources */,
+				A464D7A727EFBCB400EF68EB /* GameScene+SKPhysicsContactDelegate.swift in Sources */,
+				A464D7B227EFBD8100EF68EB /* BitMask.swift in Sources */,
 				A464D76527EFAD1F00EF68EB /* AppDelegate.swift in Sources */,
+				A464D7AC27EFBD0C00EF68EB /* Player.swift in Sources */,
+				A464D7BA27EFBF8A00EF68EB /* Dialog.swift in Sources */,
+				A42B27B127F0F6D800F0F956 /* ReceiptResponse.swift in Sources */,
+				A42B27AB27F0ED5600F0F956 /* ProductCell.swift in Sources */,
+				A464D7B827EFBF3200EF68EB /* ShopScene.swift in Sources */,
+				A464D79B27EFB92700EF68EB /* OnlineGameScene.swift in Sources */,
+				A464D78E27EFB4A200EF68EB /* InstructionViewController.swift in Sources */,
+				A42B27AF27F0EF4700F0F956 /* ProductType.swift in Sources */,
+				A464D78A27EFB0B200EF68EB /* UIConfig.swift in Sources */,
+				A464D78727EFAED500EF68EB /* DimensionExtension.swift in Sources */,
+				A464D79427EFB84F00EF68EB /* ShopViewController.swift in Sources */,
+				A464D77E27EFADF400EF68EB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A464D76E27EFAD1F00EF68EB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A464D76F27EFAD1F00EF68EB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A464D77327EFAD2000EF68EB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,16 +592,18 @@
 		};
 		A464D77927EFAD2000EF68EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECCD0788A92610EEB17CE48F /* Pods-VolleyGold.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VolleyGold/VolleyGold.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35SAGLF8X5;
+				DEVELOPMENT_TEAM = 2VBCC3QCHE;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -308,7 +612,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = yifan.VolleyGold;
+				PRODUCT_BUNDLE_IDENTIFIER = zhangyifan.VolleyGold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -318,16 +622,18 @@
 		};
 		A464D77A27EFAD2000EF68EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0280DC63EBA55BE588D6698E /* Pods-VolleyGold.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VolleyGold/VolleyGold.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35SAGLF8X5;
+				DEVELOPMENT_TEAM = 2VBCC3QCHE;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -336,7 +642,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = yifan.VolleyGold;
+				PRODUCT_BUNDLE_IDENTIFIER = zhangyifan.VolleyGold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
