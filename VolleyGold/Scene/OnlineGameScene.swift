@@ -134,10 +134,11 @@ class OnlineGameScene: GameScene {
     override func gameOver() {
         match?.disconnect()
         
-        let reveal = SKTransition.moveIn(with: .down, duration: 1)
-        let newScene = GameOverScene(score: role == Role.player1 ? GameSession.shared.player1Money : GameSession.shared.player2Money)
-        newScene.scaleMode = .aspectFit
-        view?.presentScene(newScene, transition: reveal)
+        super.gameOver()
+    }
+    
+    override func score() -> Int {
+        return player.money
     }
     
     func initPlayerSkins() {

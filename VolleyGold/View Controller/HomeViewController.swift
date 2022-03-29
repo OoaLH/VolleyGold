@@ -58,6 +58,7 @@ class HomeViewController: UIViewController {
         stackView.spacing = 10.height
         stackView.addArrangedSubview(onlineButton)
         stackView.addArrangedSubview(localButton)
+        stackView.addArrangedSubview(singleButton)
         view.addSubview(stackView)
         stackView.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(40.width)
@@ -113,6 +114,7 @@ class HomeViewController: UIViewController {
     func configureEvents() {
         onlineButton.addTarget(self, action: #selector(onlineGaming), for: .touchUpInside)
         localButton.addTarget(self, action: #selector(localGaming), for: .touchUpInside)
+        singleButton.addTarget(self, action: #selector(singleGaming), for: .touchUpInside)
         instructionButton.addTarget(self, action: #selector(instruction), for: .touchUpInside)
         shopButton.addTarget(self, action: #selector(shop), for: .touchUpInside)
         settingButton.addTarget(self, action: #selector(setting), for: .touchUpInside)
@@ -147,7 +149,7 @@ class HomeViewController: UIViewController {
             spinView.startAnimating()
             view.isUserInteractionEnabled = false
             
-            GameCenterManager.shared.authenticate {
+            GameCenterManager.shared.authenticate { [unowned self] in
                 spinView.stopAnimating()
                 view.isUserInteractionEnabled = true
                 GameCenterManager.shared.presentMatchmaker()
@@ -157,6 +159,12 @@ class HomeViewController: UIViewController {
     
     @objc func localGaming() {
         let vc = GameViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func singleGaming() {
+        let vc = SingleGameViewController()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
@@ -233,6 +241,17 @@ class HomeViewController: UIViewController {
     lazy var localButton: UIButton = {
         let view = UIButton()
         view.setTitle("local", for: .normal)
+        view.setTitleColor(.white, for: .normal)
+        view.titleLabel?.font = UIFont(name: "Chalkduster", size: 20)
+        view.backgroundColor = .brown
+        view.layer.cornerRadius = 10
+        view.contentEdgeInsets = UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
+        return view
+    }()
+    
+    lazy var singleButton: UIButton = {
+        let view = UIButton()
+        view.setTitle("single", for: .normal)
         view.setTitleColor(.white, for: .normal)
         view.titleLabel?.font = UIFont(name: "Chalkduster", size: 20)
         view.backgroundColor = .brown

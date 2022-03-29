@@ -160,9 +160,13 @@ class GameScene: SKScene {
     
     func gameOver() {
         let reveal = SKTransition.moveIn(with: .down, duration: 1)
-        let newScene = GameOverScene(score: max(player1.money, player2.money))
+        let newScene = GameOverScene(score: score())
         newScene.scaleMode = .aspectFit
         view?.presentScene(newScene, transition: reveal)
+    }
+    
+    func score() -> Int {
+        return max(player1.money, player2.money)
     }
     
     // MARK: SpriteScene
@@ -204,7 +208,7 @@ class GameScene: SKScene {
                 addChild(dialog)
                 dialog.position = CGPoint(x: 400, y: 196)
             } else if touchedNode == dialog.okButton {
-                GameCenterManager.shared.submitScore(score: max(player1.money, player2.money))
+                GameCenterManager.shared.submitScore(score: score())
                 exitToHome()
             } else if touchedNode == dialog.cancelButton {
                 dialog.removeFromParent()

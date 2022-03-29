@@ -127,6 +127,7 @@ class OnlineShopScene: ShopScene {
             GameSession.shared.player2Money -= good.price
             good.takeAffectToPlayer2()
         }
+        updateMoneyLabels()
         alertPopup(text: "-$\(good.price)")
     }
     
@@ -139,6 +140,11 @@ class OnlineShopScene: ShopScene {
         view?.presentScene(scene, transition: reveal)
         
         GameCenterManager.shared.submitScore(score: role == Role.player1 ? GameSession.shared.player1Money : GameSession.shared.player2Money)
+    }
+    
+    func updateMoneyLabels() {
+        moneyLabel1.text = player1Name + ": $\(GameSession.shared.player1Money)"
+        moneyLabel2.text = player2Name + ": $\(GameSession.shared.player2Money)"
     }
     
     func checkIfCanStart() {
@@ -340,7 +346,7 @@ extension OnlineShopScene: GKMatchDelegate {
         GameSession.shared.player1Money = money1
         GameSession.shared.player2Money = money2
         
-        moneyLabel.text = "money:"
+        updateMoneyLabels()
         moneyReceived = true
     }
 }

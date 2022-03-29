@@ -58,6 +58,9 @@
 		A464D7C627EFC28400EF68EB /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464D7C527EFC28400EF68EB /* Goods.swift */; };
 		A486644C27F2A6D80080841A /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486644B27F2A6D80080841A /* GameOverScene.swift */; };
 		A486644E27F2B17E0080841A /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = A486644D27F2B17E0080841A /* Configuration.storekit */; };
+		A486645527F377AD0080841A /* SingleGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486645427F377AD0080841A /* SingleGameScene.swift */; };
+		A486645727F3833F0080841A /* SingleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486645627F3833F0080841A /* SingleGameViewController.swift */; };
+		A486645927F38D370080841A /* SingleShopScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486645827F38D370080841A /* SingleShopScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +117,9 @@
 		A464D7C527EFC28400EF68EB /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
 		A486644B27F2A6D80080841A /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		A486644D27F2B17E0080841A /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		A486645427F377AD0080841A /* SingleGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGameScene.swift; sourceTree = "<group>"; };
+		A486645627F3833F0080841A /* SingleGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGameViewController.swift; sourceTree = "<group>"; };
+		A486645827F38D370080841A /* SingleShopScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleShopScene.swift; sourceTree = "<group>"; };
 		D04886759AD5ADF6219DF170 /* Pods_VolleyGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VolleyGold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECCD0788A92610EEB17CE48F /* Pods-VolleyGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolleyGold.debug.xcconfig"; path = "Target Support Files/Pods-VolleyGold/Pods-VolleyGold.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,9 +230,10 @@
 				A464D76C27EFAD1F00EF68EB /* GameViewController.swift */,
 				A464D77D27EFADF400EF68EB /* HomeViewController.swift */,
 				A464D78D27EFB4A200EF68EB /* InstructionViewController.swift */,
-				A464D79327EFB84F00EF68EB /* ShopViewController.swift */,
-				A464D79527EFB87200EF68EB /* SettingViewController.swift */,
 				A464D79727EFB89800EF68EB /* OnlineGameViewController.swift */,
+				A464D79527EFB87200EF68EB /* SettingViewController.swift */,
+				A464D79327EFB84F00EF68EB /* ShopViewController.swift */,
+				A486645627F3833F0080841A /* SingleGameViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -265,12 +272,14 @@
 		A464D79927EFB8B700EF68EB /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				A464D76A27EFAD1F00EF68EB /* GameScene.swift */,
-				A464D79A27EFB92700EF68EB /* OnlineGameScene.swift */,
-				A464D7A627EFBCB400EF68EB /* GameScene+SKPhysicsContactDelegate.swift */,
-				A464D7B727EFBF3200EF68EB /* ShopScene.swift */,
-				A464D7BF27EFC16E00EF68EB /* OnlineShopScene.swift */,
 				A486644B27F2A6D80080841A /* GameOverScene.swift */,
+				A464D76A27EFAD1F00EF68EB /* GameScene.swift */,
+				A464D7A627EFBCB400EF68EB /* GameScene+SKPhysicsContactDelegate.swift */,
+				A486645427F377AD0080841A /* SingleGameScene.swift */,
+				A464D79A27EFB92700EF68EB /* OnlineGameScene.swift */,
+				A464D7BF27EFC16E00EF68EB /* OnlineShopScene.swift */,
+				A464D7B727EFBF3200EF68EB /* ShopScene.swift */,
+				A486645827F38D370080841A /* SingleShopScene.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -420,8 +429,10 @@
 				A464D76B27EFAD1F00EF68EB /* GameScene.swift in Sources */,
 				A464D78427EFAE9500EF68EB /* PurchaseManager.swift in Sources */,
 				A464D78C27EFB3AD00EF68EB /* UIViewControllerExtension.swift in Sources */,
+				A486645527F377AD0080841A /* SingleGameScene.swift in Sources */,
 				A464D7A327EFBAAB00EF68EB /* SKSceneExtension.swift in Sources */,
 				A464D7C427EFC26D00EF68EB /* GoodsType.swift in Sources */,
+				A486645727F3833F0080841A /* SingleGameViewController.swift in Sources */,
 				A464D79F27EFB98300EF68EB /* SkinProduct.swift in Sources */,
 				A464D7C227EFC1CA00EF68EB /* GameMessage.swift in Sources */,
 				A464D79027EFB73700EF68EB /* UITextViewExtension.swift in Sources */,
@@ -454,6 +465,7 @@
 				A464D78E27EFB4A200EF68EB /* InstructionViewController.swift in Sources */,
 				A42B27AF27F0EF4700F0F956 /* ProductType.swift in Sources */,
 				A464D78A27EFB0B200EF68EB /* UIConfig.swift in Sources */,
+				A486645927F38D370080841A /* SingleShopScene.swift in Sources */,
 				A464D78727EFAED500EF68EB /* DimensionExtension.swift in Sources */,
 				A464D79427EFB84F00EF68EB /* ShopViewController.swift in Sources */,
 				A464D77E27EFADF400EF68EB /* HomeViewController.swift in Sources */,
