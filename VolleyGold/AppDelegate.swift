@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         SKPaymentQueue.default().add(PurchaseManager.shared)
         PurchaseManager.shared.updatePurchaseStatus()
+        
         return true
     }
 
@@ -52,7 +53,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
-
-
 }
 

@@ -48,6 +48,8 @@ class HomeViewController: UIViewController {
     }
     
     func configureViews() {
+        view.backgroundColor = .brown
+        
         view.addSubview(backgroundView)
         backgroundView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -223,7 +225,7 @@ class HomeViewController: UIViewController {
     lazy var backgroundView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "home")
-        view.contentMode = .scaleAspectFill
+        view.contentMode = .scaleAspectFit
         return view
     }()
     

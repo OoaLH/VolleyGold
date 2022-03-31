@@ -11,12 +11,14 @@ protocol PurchaseManagerDelegate: AnyObject {
     func purchaseManager(didFinishProductRequestWith products: [SKProduct]?, isSuccess: Bool)
     func purchaseManager(didFailWithError error: Error?)
     func purchaseManager(didUpdatePurchaseStatusOf productType: ProductType?)
+    func purchaseManagerRestoreFinished()
 }
 
 extension PurchaseManagerDelegate {
     func purchaseManager(didFinishProductRequestWith products: [SKProduct]?, isSuccess: Bool) {}
     func purchaseManager(didFailWithError error: Error?) {}
     func purchaseManager(didUpdatePurchaseStatusOf productType: ProductType?) {}
+    func purchaseManagerRestoreFinished() {}
 }
 
 class PurchaseManager: NSObject {
@@ -90,7 +92,6 @@ class PurchaseManager: NSObject {
         request.httpMethod = "POST"
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = httpBody
-        print(requestData)
         URLSession.shared.dataTask(with: request)  { (data, response, error) in
             if let error = error {
                 print(error)
@@ -100,7 +101,6 @@ class PurchaseManager: NSObject {
             DispatchQueue.main.async {
                 if let data = data, let jsonData = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] {
                     let subscriptionResponse = ReceiptResponse(data: jsonData)
-                    print(jsonData)
                     completionHandler(subscriptionResponse.productType)
                 } else {
                     print("data invalid")
@@ -159,9 +159,9 @@ extension PurchaseManager: SKPaymentTransactionObserver {
             case .purchased:
                 purchased(transaction: transaction, productType: productType)
             case .failed:
-                fail(transaction: transaction)
+                failed(transaction: transaction)
             case .restored:
-                restore(transaction: transaction, productType: productType)
+                restored(transaction: transaction, productType: productType)
             default:
                 break
             }
@@ -172,20 +172,24 @@ extension PurchaseManager: SKPaymentTransactionObserver {
         delegate?.purchaseManager(didFailWithError: error)
     }
     
+    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
+        delegate?.purchaseManagerRestoreFinished()
+    }
+    
     private func purchased(transaction: SKPaymentTransaction, productType: ProductType) {
         print("purchase...")
         
         completeSubscribe(transaction: transaction, productType: productType)
     }
     
-    private func restore(transaction: SKPaymentTransaction, productType: ProductType) {
+    private func restored(transaction: SKPaymentTransaction, productType: ProductType) {
         guard let productIdentifier = transaction.original?.payment.productIdentifier else { return }
         
         print("restore... \(productIdentifier)")
         completeSubscribe(transaction: transaction, productType: productType)
     }
     
-    private func fail(transaction: SKPaymentTransaction) {
+    private func failed(transaction: SKPaymentTransaction) {
         print("fail...")
         if let transactionError = transaction.error as NSError?, transactionError.code != SKError.paymentCancelled.rawValue {
             delegate?.purchaseManager(didFailWithError: transactionError)

@@ -115,6 +115,7 @@
 		A464D7C127EFC1CA00EF68EB /* GameMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMessage.swift; sourceTree = "<group>"; };
 		A464D7C327EFC26D00EF68EB /* GoodsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsType.swift; sourceTree = "<group>"; };
 		A464D7C527EFC28400EF68EB /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
+		A47AC78527F4FDA800BE1295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A486644B27F2A6D80080841A /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		A486644D27F2B17E0080841A /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		A486645427F377AD0080841A /* SingleGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGameScene.swift; sourceTree = "<group>"; };
@@ -197,6 +198,7 @@
 		A464D76327EFAD1F00EF68EB /* VolleyGold */ = {
 			isa = PBXGroup;
 			children = (
+				A47AC78527F4FDA800BE1295 /* Info.plist */,
 				A42B27B627F127DD00F0F956 /* VolleyGold.entitlements */,
 				A464D76427EFAD1F00EF68EB /* AppDelegate.swift */,
 				A464D78527EFAECE00EF68EB /* Extension */,
@@ -610,9 +612,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VolleyGold/VolleyGold.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 2VBCC3QCHE;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VolleyGold/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
@@ -640,9 +643,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VolleyGold/VolleyGold.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 2VBCC3QCHE;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VolleyGold/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;

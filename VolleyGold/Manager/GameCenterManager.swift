@@ -86,7 +86,7 @@ final class GameCenterManager: NSObject {
         }
         
         GKLeaderboard.submitScore(score, context: 0, player: GKLocalPlayer.local,
-                                  leaderboardIDs: ["BestScore"]) { error in
+                                  leaderboardIDs: ["VolleyGoldBestScore"]) { error in
             print(error.debugDescription)
         }
     }

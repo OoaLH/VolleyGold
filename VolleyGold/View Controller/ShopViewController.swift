@@ -58,8 +58,14 @@ class ShopViewController: UIViewController {
         
         view.addSubview(buyButton)
         buyButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-40.width)
+            make.bottom.equalToSuperview().offset(-50.width)
             make.width.equalTo(200.width)
+            make.centerX.equalToSuperview()
+        }
+        
+        view.addSubview(restoreButton)
+        restoreButton.snp.makeConstraints { make in
+            make.top.equalTo(buyButton.snp.bottom)
             make.centerX.equalToSuperview()
         }
         
@@ -82,6 +88,7 @@ class ShopViewController: UIViewController {
     func configureEvents() {
         closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
         buyButton.addTarget(self, action: #selector(buy), for: .touchUpInside)
+        restoreButton.addTarget(self, action: #selector(restore), for: .touchUpInside)
     }
     
     @objc func buy() {
@@ -90,6 +97,10 @@ class ShopViewController: UIViewController {
         buyButton.setTitle("Processing", for: .normal)
         buyButton.isUserInteractionEnabled = false
         buyButton.backgroundColor = .systemGray
+    }
+    
+    @objc func restore() {
+        PurchaseManager.shared.restorePurchases()
     }
     
     @objc func close() {
@@ -134,6 +145,13 @@ class ShopViewController: UIViewController {
         view.contentEdgeInsets = UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
         view.isUserInteractionEnabled = false
         view.backgroundColor = .systemGray
+        return view
+    }()
+    
+    lazy var restoreButton: UIButton = {
+        let view = UIButton(type: .system)
+        view.setTitle("Restore", for: .normal)
+        view.setTitleColor(.systemGray2, for: .normal)
         return view
     }()
     
@@ -186,6 +204,10 @@ extension ShopViewController: PurchaseManagerDelegate {
         buyButton.setTitle("Buy", for: .normal)
         buyButton.isUserInteractionEnabled = true
         buyButton.backgroundColor = .brown
+    }
+    
+    func purchaseManagerRestoreFinished() {
+        showAlert(title: "Restore finished", message: "Your purchase status is updated.")
     }
 }
 

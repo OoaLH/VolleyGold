@@ -12,9 +12,7 @@ struct ReceiptResponse {
     var productType: ProductType?
     
     init(data: [String: Any]) {
-        // your non-consumable and non-renewing subscription receipts are in `in_app` array
-        // your auto-renewable subscription receipts are in `latest_receipt_info` array
-        guard let latestReceiptInfo = (data["in_app"] as? [[String: AnyObject]])?.first, let productId = latestReceiptInfo["product_id"] as? String else {
+        guard let latestReceiptInfo = (data["latest_receipt_info"] as? [[String: AnyObject]])?.first, let productId = latestReceiptInfo["product_id"] as? String else {
             return
         }
         self.productId = productId
