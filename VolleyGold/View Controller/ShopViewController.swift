@@ -150,7 +150,7 @@ class ShopViewController: UIViewController {
     
     lazy var restoreButton: UIButton = {
         let view = UIButton(type: .system)
-        view.setTitle("Restore", for: .normal)
+        view.setTitle("Restore purchases", for: .normal)
         view.setTitleColor(.systemGray2, for: .normal)
         return view
     }()

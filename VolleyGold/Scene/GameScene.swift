@@ -7,6 +7,7 @@
 
 import UIKit
 import SpriteKit
+import GameController
 
 class GameScene: SKScene {
     var time: Int = Tuning.gameDuration {
@@ -43,6 +44,7 @@ class GameScene: SKScene {
     override func sceneDidLoad() {
         configureViews()
         configurePhysics()
+        configureControllers()
     }
     
     func configureViews() {
@@ -59,6 +61,53 @@ class GameScene: SKScene {
     func configurePhysics() {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         physicsWorld.contactDelegate = self
+    }
+    
+    func configureControllers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(connectControllers), name: NSNotification.Name.GCControllerDidConnect, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(disconnectControllers), name: NSNotification.Name.GCControllerDidDisconnect, object: nil)
+        connectControllers()
+    }
+    
+    @objc func disconnectControllers() {
+        isPaused = true
+        addChild(dialog)
+        dialog.position = CGPoint(x: 400, y: 196)
+    }
+    
+    @objc func connectControllers() {
+        for index in 0..<GCController.controllers().count {
+            let controller = GCController.controllers()[index]
+            controller.playerIndex = GCControllerPlayerIndex(rawValue: index) ?? .index1
+            controller.extendedGamepad?.valueChangedHandler = controllerInputDetected
+        }
+    }
+    
+    func controllerInputDetected(gamePad: GCExtendedGamepad, element: GCControllerElement) {
+        let player = gamePad.controller?.playerIndex == .index1 ? player1 : player2
+        if element == gamePad.leftThumbstick {
+            if gamePad.leftThumbstick.xAxis.value < 0 {
+                player.direction = .left
+            } else if gamePad.leftThumbstick.xAxis.value == 0 {
+                player.direction = .none
+            } else {
+                player.direction = .right
+            }
+        } else if element == gamePad.buttonA {
+            player.jump()
+        } else if element == gamePad.dpad {
+            if gamePad.dpad.left.isPressed {
+                player.direction = .left
+            } else if gamePad.dpad.right.isPressed {
+                player.direction = .right
+            } else {
+                player.direction = .none
+            }
+        } else if element == gamePad.buttonHome && !isPaused {
+            isPaused = true
+            addChild(dialog)
+            dialog.position = CGPoint(x: 400, y: 196)
+        }
     }
     
     func initBackground() {

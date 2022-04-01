@@ -141,6 +141,34 @@ class OnlineGameScene: GameScene {
         return player.money
     }
     
+    override func disconnectControllers() {
+        dialog.isHidden = false
+    }
+    
+    override func controllerInputDetected(gamePad: GCExtendedGamepad, element: GCControllerElement) {
+        if element == gamePad.leftThumbstick {
+            if gamePad.leftThumbstick.xAxis.value < 0 {
+                player.direction = .left
+            } else if gamePad.leftThumbstick.xAxis.value == 0 {
+                player.direction = .none
+            } else {
+                player.direction = .right
+            }
+        } else if element == gamePad.buttonA {
+            player.jump()
+        } else if element == gamePad.dpad {
+            if gamePad.dpad.left.isPressed {
+                player.direction = .left
+            } else if gamePad.dpad.right.isPressed {
+                player.direction = .right
+            } else {
+                player.direction = .none
+            }
+        } else if element == gamePad.buttonHome {
+            dialog.isHidden = false
+        }
+    }
+    
     func initPlayerSkins() {
         player = role == Role.player1 ? player1 : player2
         otherPlayer = role == Role.player1 ? player2 : player1

@@ -34,6 +34,32 @@ class SingleGameScene: GameScene {
         return player1.money
     }
     
+    override func controllerInputDetected(gamePad: GCExtendedGamepad, element: GCControllerElement) {
+        if element == gamePad.leftThumbstick {
+            if gamePad.leftThumbstick.xAxis.value < 0 {
+                player1.direction = .left
+            } else if gamePad.leftThumbstick.xAxis.value == 0 {
+                player1.direction = .none
+            } else {
+                player1.direction = .right
+            }
+        } else if element == gamePad.buttonA {
+            player1.jump()
+        } else if element == gamePad.dpad {
+            if gamePad.dpad.left.isPressed {
+                player1.direction = .left
+            } else if gamePad.dpad.right.isPressed {
+                player1.direction = .right
+            } else {
+                player1.direction = .none
+            }
+        } else if element == gamePad.buttonHome {
+            isPaused = true
+            addChild(dialog)
+            dialog.position = CGPoint(x: 400, y: 196)
+        }
+    }
+    
     override func exitLevel() {
         GameSession.shared.nextLevel()
         if GameSession.shared.level > Tuning.totalNumberOfLevels {

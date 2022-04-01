@@ -61,6 +61,7 @@
 		A486645527F377AD0080841A /* SingleGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486645427F377AD0080841A /* SingleGameScene.swift */; };
 		A486645727F3833F0080841A /* SingleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486645627F3833F0080841A /* SingleGameViewController.swift */; };
 		A486645927F38D370080841A /* SingleShopScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486645827F38D370080841A /* SingleShopScene.swift */; };
+		A4A9FD5827F79C2C005C6917 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A9FD5727F79C2C005C6917 /* GameController.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,7 @@
 		A486645427F377AD0080841A /* SingleGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGameScene.swift; sourceTree = "<group>"; };
 		A486645627F3833F0080841A /* SingleGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGameViewController.swift; sourceTree = "<group>"; };
 		A486645827F38D370080841A /* SingleShopScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleShopScene.swift; sourceTree = "<group>"; };
+		A4A9FD5727F79C2C005C6917 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		D04886759AD5ADF6219DF170 /* Pods_VolleyGold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VolleyGold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECCD0788A92610EEB17CE48F /* Pods-VolleyGold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolleyGold.debug.xcconfig"; path = "Target Support Files/Pods-VolleyGold/Pods-VolleyGold.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 			files = (
 				A42B27B827F127E900F0F956 /* StoreKit.framework in Frameworks */,
 				2138D7786057B93AF02DF1B2 /* Pods_VolleyGold.framework in Frameworks */,
+				A4A9FD5827F79C2C005C6917 /* GameController.framework in Frameworks */,
 				A42B27B527F127D400F0F956 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +145,7 @@
 		240CD5E3948E04F44F49EC4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4A9FD5727F79C2C005C6917 /* GameController.framework */,
 				A42B27B727F127E900F0F956 /* StoreKit.framework */,
 				A42B27B427F127D400F0F956 /* GameKit.framework */,
 				D04886759AD5ADF6219DF170 /* Pods_VolleyGold.framework */,
