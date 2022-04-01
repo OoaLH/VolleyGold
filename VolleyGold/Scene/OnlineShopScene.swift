@@ -35,12 +35,6 @@ class OnlineShopScene: ShopScene {
         }
     }
     
-    var bombsReceived: Bool = false {
-        didSet {
-            checkIfCanStart()
-        }
-    }
-    
     var goodsReceived: Bool = false {
         didSet {
             checkIfCanStart()
@@ -64,7 +58,6 @@ class OnlineShopScene: ShopScene {
             player1Name = GKLocalPlayer.local.displayName
             player2Name = match.players.first?.displayName ?? "player2"
             sendMoneyData()
-            bombsReceived = true
             moneyReceived = true
         } else {
             player1Name = match.players.first?.displayName ?? "player1"
@@ -148,7 +141,7 @@ class OnlineShopScene: ShopScene {
     }
     
     func checkIfCanStart() {
-        if bombsReceived && goodsReceived && moneyReceived {
+        if goodsReceived && moneyReceived {
             canStart = true
         }
     }
