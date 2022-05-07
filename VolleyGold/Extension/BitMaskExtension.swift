@@ -12,19 +12,15 @@ extension UInt32 {
         return self == 0b1
     }
     
-    var isHook: Bool {
-        return self == 0b10
-    }
-    
     var isBasket: Bool {
-        return isHook
+        return self == 0b10
     }
     
     var isPlayer: Bool {
         return self == 0b101
     }
     
-    var isWave: Bool {
-        return self == 0b100
+    var isGround: Bool {
+        return self == 0b1001
     }
 }

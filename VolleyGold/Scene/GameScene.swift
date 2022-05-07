@@ -53,6 +53,7 @@ class GameScene: SKScene {
         initGold()
         initBaskets()
         initGarbageBins()
+        initNet()
         initLabels()
         initButtons()
         initTimer()
@@ -118,6 +119,8 @@ class GameScene: SKScene {
         node.size = CGSize(width: 800, height: 400)
         node.zPosition = UIConfig.backgroundZPosition
         addChild(node)
+        
+        addChild(ground)
     }
     
     func initPlayers() {
@@ -126,10 +129,18 @@ class GameScene: SKScene {
     }
     
     func initGold() {
-        addLargeGold(at: CGPoint(x: 400, y: 360))
+        let left = Bool.random()
+        if left {
+            addLargeGold(at: CGPoint(x: 200, y: 360))
+        } else {
+            addLargeGold(at: CGPoint(x: 600, y: 360))
+        }
     }
     
     func initBaskets() {
+        if GameSession.shared.mode != .basket {
+            return
+        }
         let basket1 = Basket(player: player1)
         basket1.position = CGPoint(x: 30, y: 196)
         addChild(basket1)
@@ -140,6 +151,9 @@ class GameScene: SKScene {
     }
     
     func initGarbageBins() {
+        if GameSession.shared.mode != .basket {
+            return
+        }
         let garbageBin1 = GarbageBin()
         garbageBin1.position = CGPoint(x: 40, y: 30)
         addChild(garbageBin1)
@@ -147,6 +161,13 @@ class GameScene: SKScene {
         let garbageBin2 = GarbageBin()
         garbageBin2.position = CGPoint(x: 760, y: 30)
         addChild(garbageBin2)
+    }
+    
+    func initNet() {
+        if GameSession.shared.mode != .volley {
+            return
+        }
+        addChild(net)
     }
     
     func initLabels() {
@@ -400,6 +421,24 @@ class GameScene: SKScene {
         node.fontSize = 14
         node.fontName = "Chalkduster"
         node.fontColor = .brown
+        return node
+    }()
+    
+    lazy var net: SKShapeNode = {
+        let node = SKShapeNode(rect: CGRect(x: 397, y: 0, width: 6, height: 150))
+        node.fillColor = .lightGray
+        node.strokeColor = .gray
+        node.physicsBody = SKPhysicsBody(edgeLoopFrom: CGRect(x: 397, y: 0, width: 6, height: 150))
+        return node
+    }()
+    
+    lazy var ground: SKShapeNode = {
+        let node = SKShapeNode(rect: CGRect(x: 0, y: 0, width: 800, height: 1))
+        node.fillColor = .clear
+        node.strokeColor = .clear
+        node.physicsBody = SKPhysicsBody(edgeLoopFrom: CGRect(x: 0, y: 0, width: 800, height: 1))
+        node.physicsBody?.contactTestBitMask = PhysicsCategory.gold.rawValue
+        node.physicsBody?.categoryBitMask = PhysicsCategory.ground.rawValue
         return node
     }()
     

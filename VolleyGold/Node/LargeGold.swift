@@ -24,7 +24,7 @@ class LargeGold: SKSpriteNode {
         if let texture = texture {
             physicsBody = SKPhysicsBody(texture: texture, alphaThreshold: 0.1, size: size)
         }
-        physicsBody?.categoryBitMask = PhysicsCategory.mineral.rawValue
+        physicsBody?.categoryBitMask = PhysicsCategory.gold.rawValue
         physicsBody?.contactTestBitMask = PhysicsCategory.basket.rawValue
         physicsBody?.collisionBitMask = PhysicsCategory.none.rawValue
     }

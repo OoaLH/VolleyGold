@@ -40,7 +40,7 @@ class Player: SKSpriteNode {
         }
         physicsBody?.categoryBitMask = PhysicsCategory.player.rawValue
         physicsBody?.contactTestBitMask = PhysicsCategory.none.rawValue
-        physicsBody?.collisionBitMask = PhysicsCategory.mineral.rawValue
+        physicsBody?.collisionBitMask = PhysicsCategory.gold.rawValue
         physicsBody?.allowsRotation = false
         physicsBody?.restitution = 0
     }

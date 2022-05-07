@@ -26,7 +26,7 @@ class OnlineGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GameSession.shared.newSession(mode: .online)
+        GameSession.shared.newSession()
         
         let skView = SKView(frame: view.frame.inset(by: UIConfig.safeAreaInsets))
         skView.isMultipleTouchEnabled = true

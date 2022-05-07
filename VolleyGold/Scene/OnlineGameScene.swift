@@ -79,6 +79,7 @@ class OnlineGameScene: GameScene {
         initLabels()
         initBaskets()
         initGarbageBins()
+        initNet()
     }
     
     override func initLabels() {
@@ -110,7 +111,12 @@ class OnlineGameScene: GameScene {
         gold = LargeGold()
         gold?.physicsBody?.collisionBitMask = PhysicsCategory.all.rawValue
         gold?.physicsBody?.restitution = 1
-        gold?.position = CGPoint(x: 400, y: 360)
+        let left = Bool.random()
+        if left {
+            gold?.position = CGPoint(x: 200, y: 360)
+        } else {
+            gold?.position = CGPoint(x: 600, y: 360)
+        }
         addChild(gold!)
     }
     

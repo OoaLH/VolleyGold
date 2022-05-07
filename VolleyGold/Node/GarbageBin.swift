@@ -26,7 +26,7 @@ class GarbageBin: SKSpriteNode {
             physicsBody = SKPhysicsBody(texture: texture, alphaThreshold: 0.1, size: size)
         }
         physicsBody?.categoryBitMask = PhysicsCategory.basket.rawValue
-        physicsBody?.contactTestBitMask = PhysicsCategory.mineral.rawValue
+        physicsBody?.contactTestBitMask = PhysicsCategory.gold.rawValue
         physicsBody?.collisionBitMask = PhysicsCategory.none.rawValue
         physicsBody?.affectedByGravity = false
     }

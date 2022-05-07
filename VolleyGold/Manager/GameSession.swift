@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum GameMode {
-    case local
-    case online
+enum GameMode: Int {
+    case basket = 0
+    case volley
 }
 
 class GameSession {
@@ -17,7 +17,7 @@ class GameSession {
     
     private init() {}
     
-    var mode: GameMode = .local
+    var mode: GameMode = .basket
     
     var level: Int = 1
     
@@ -26,15 +26,17 @@ class GameSession {
     
     var otherSkin: SkinType?
     
-    func newSession(mode: GameMode = .local) {
-        self.mode = mode
+    func newSession(mode: GameMode = .basket) {
+        self.mode = .basket
         player1Money = 0
         player2Money = 0
         otherSkin = nil
+        level = 1
     }
     
     func nextLevel() {
         level += 1
         Tuning.recoverTuning()
+        mode = GameMode(rawValue: (level - 1) % 2) ?? .basket
     }
 }

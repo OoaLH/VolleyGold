@@ -28,6 +28,16 @@ extension GameScene: SKPhysicsContactDelegate {
                 garbageBinCaughtGold(garbageBin: garbageBin, gold: gold)
             }
         }
+        
+        if GameSession.shared.mode == .volley && firstBody.categoryBitMask.isGold && secondBody.categoryBitMask.isGround {
+            if let gold = firstBody.node as? LargeGold {
+                if contact.contactPoint.x < 400 {
+                    groundCaughtGold(at: player2, gold: gold)
+                } else {
+                    groundCaughtGold(at: player1, gold: gold)
+                }
+            }
+        }
     }
     
     func basketCaughtGold(basket: Basket, gold: LargeGold) {
@@ -40,6 +50,15 @@ extension GameScene: SKPhysicsContactDelegate {
     }
     
     func garbageBinCaughtGold(garbageBin: GarbageBin, gold: LargeGold) {
+        gold.removeFromParent()
+        
+        initGold()
+    }
+    
+    func groundCaughtGold(at player: Player, gold: LargeGold) {
+        player.gainMoney()
+        updateMoneyLabels()
+        alertPopup(text: "+$\(player.playerPrice)", at: player.position - CGPoint(x: 40, y: 40))
         gold.removeFromParent()
         
         initGold()
