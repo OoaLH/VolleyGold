@@ -77,13 +77,13 @@ class PurchaseManager: NSObject {
         sendReceiptToAppStore(receipt: receipt, completionHandler)
     }
     
-    private func sendReceiptToAppStore(receipt: String, _ completionHandler: @escaping (ProductType?) -> Void) {
+    private func sendReceiptToAppStore(receipt: String, _ completionHandler: @escaping (ProductType?) -> Void, debug: Bool = false) {
         var url: URL
-        #if DEBUG
+        if debug {
             url = URL(string: "https://sandbox.itunes.apple.com/verifyReceipt")!
-        #else
+        } else {
             url = URL(string: "https://buy.itunes.apple.com/verifyReceipt")!
-        #endif
+        }
         var request = URLRequest(url: url)
         let requestData: [String: Any] = ["receipt-data": receipt,
                                           "password": "6ef1b54c35bf4d1a94c0a5d1082b9657",
@@ -98,10 +98,14 @@ class PurchaseManager: NSObject {
                 completionHandler(nil)
                 return
             }
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [unowned self] in
                 if let data = data, let jsonData = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] {
-                    let subscriptionResponse = ReceiptResponse(data: jsonData)
-                    completionHandler(subscriptionResponse.productType)
+                    if jsonData["status"] as? Int == 21007 {
+                        sendReceiptToAppStore(receipt: receipt, completionHandler, debug: true)
+                    } else {
+                        let subscriptionResponse = ReceiptResponse(data: jsonData)
+                        completionHandler(subscriptionResponse.productType)
+                    }
                 } else {
                     print("data invalid")
                     completionHandler(nil)
@@ -201,11 +205,7 @@ extension PurchaseManager: SKPaymentTransactionObserver {
     }
     
     private func completeSubscribe(transaction: SKPaymentTransaction, productType: ProductType) {
-        #if DEBUG
-            purchasedProduct = productType
-        #else
-            updatePurchaseStatus()
-        #endif
+        purchasedProduct = productType
         
         SKPaymentQueue.default().finishTransaction(transaction)
     }

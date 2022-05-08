@@ -16,11 +16,12 @@ class SettingView: UIView {
     
     init(userDefaultKey: String) {
         self.userDefaultKey = userDefaultKey
-        self.selectedSkin = UserDefaults.standard.string(forKey: userDefaultKey) ?? "pig"
         
         if PurchaseManager.shared.purchasedProduct != nil {
+            self.selectedSkin = UserDefaults.standard.string(forKey: userDefaultKey) ?? "pig"
             models = SkinType.allCases
         } else {
+            self.selectedSkin = "pig"
             models = [.pig]
             promotionText = " - Buy Character's Pack to unlock more characters!"
         }

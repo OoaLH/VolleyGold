@@ -94,7 +94,11 @@ class SettingViewController: UIViewController {
     }
     
     @objc func close() {
-        dismiss(animated: true, completion: nil)
+        if PurchaseManager.shared.purchasedProduct == nil {
+            confirm()
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     lazy var models: [[SkinType]] = {
